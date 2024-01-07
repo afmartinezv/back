@@ -1,0 +1,3 @@
+const ControladorRegalos = {
+    crearRegalo
+}
