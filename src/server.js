@@ -5,7 +5,7 @@ const server = express();
 const puerto = process.env.PORT;
 
 server.set('port', puerto);
-
+server.use(express.json());
 server.use("/regalos/", routerRegalos)
 
 server.get('/', (request,response) => {
