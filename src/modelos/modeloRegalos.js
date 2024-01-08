@@ -1,9 +1,12 @@
 import {Schema, model} from "mongoose";
 
 const esquemaRegalos = new Schema({
-    destinatario: {type:String, require: true},
-    nombre: {type:String, require: true},
-    entregado: {type:Boolean, require: true},
-});
+    destinatario: {type:String, required: true},
+    nombre: {type:String, required: true},
+    entregado: {type:Boolean, required: true},
+},
+
+    {versionKey: false, timestamps: true}
+);
 
 export default model("Regalo", esquemaRegalos);

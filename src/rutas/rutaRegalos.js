@@ -3,9 +3,10 @@ import ControladorRegalos from "../controladores/controladorRegalos.js";
 
 const router = Router();
 
-router.get('/', ControladorRegalos.leerRegalos);
 router.post('/', ControladorRegalos.crearRegalo);
-router.put('/', ControladorRegalos.actualizarRegalo);
-router.delete('/', ControladorRegalos.eliminarRegalo);
+router.get('/', ControladorRegalos.leerRegalos);
+router.get('/:id', ControladorRegalos.leerRegalo);
+router.put('/:id', ControladorRegalos.actualizarRegalo);
+router.delete('/:id', ControladorRegalos.eliminarRegalo);
 
 export default router;
